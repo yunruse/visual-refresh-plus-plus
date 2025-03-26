@@ -1,0 +1,87 @@
+/* Bottom-left: User Status */
+.panels_c48ade {
+    width: 100% !important;
+    left: 0 !important;
+    bottom: -1px !important;
+    border-radius: 0 !important;
+}
+
+
+/* Message box */
+.form_f75fb0 {
+    padding: 0 !important;
+}
+.channelTextArea_f75fb0 {
+    border: none;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    height: 56px !important
+}
+.channelBottomBarArea_f75fb0 {
+    border-top: 1px solid var(--border-subtle) !important;
+}
+.channelTextArea_f75fb0 {
+    border: none !important;
+}
+.scrollableContainer__74017 {
+    border-radius: 0 !important
+}
+
+.buttons__74017 {
+    gap: 0 !important;
+}
+
+button[aria-label="Send a gift"] {
+    display: none !important;
+}
+
+.typing_b88801 {
+    top: 0 !important;
+    left: 5em !important;
+}
+
+/* Hoist sidebar a bit */
+
+.sidebar_c48ade {
+    top: calc(0px - var(--custom-app-top-bar-height)) !important;
+    margin-bottom: calc(0px - var(--custom-app-top-bar-height)) !important;
+}
+
+.privateChannels__35e86 > .searchBar__35e86,
+header.header_f37cb1,
+.bannerVisible_f37cb1 .headerGlass_f37cb1 {
+    height: calc(var(--custom-app-top-bar-height) + 1px) !important;
+}
+.title__85643 {
+    /* todo: let click underneath! */
+    z-index: 10
+}
+
+.container_f37cb1 {
+    /* width: 0; */
+    border-bottom: 1px solid var(--border-subtle);
+}
+header.header_f37cb1 {
+    width: 0 !important;
+    border-bottom: none !important;
+}
+.name_f37cb1 {
+    display: none !important;
+}
+
+.sidebarListRounded_c48ade {
+    border-top: none !important;
+    border-radius: 0 !important
+}
+.guilds_c48ade {
+    margin-top: var(--custom-app-top-bar-height) !important
+}
+
+/* Make search bar collapse when not in use */
+.searchBar__97492 {
+    width: 6em !important
+}
+
+.focused__97492 .searchBar__97492 {
+    width: 244px !important;
+}
