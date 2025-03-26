@@ -11,9 +11,9 @@
  * @name 'Visual Refresh' Tweaks
  * @author Mia yun Ruse
  * @authorId 391292177826709504
- * @version 0
+ * @version 0.2.0
  * @website https://gist.github.com/yunruse/1c3850d49f3bc2d69d2d91738da7b29b
- * @description Tweak some of the 'Visual Refresh' changes to fit in a bit nicer.
+ * @description Tweak some of the 'Visual Refresh' changes to fit in a bit nicer; most notably 'docking' the floating elements at the bottom.
  **/
 
 /* Bottom-left: User Status */
@@ -22,6 +22,7 @@
     left: 0 !important;
     bottom: -1px !important;
     border-radius: 0 !important;
+    background: var(--background-base-low);
 }
 
 
@@ -33,10 +34,11 @@
     border: none;
     border-radius: 0 !important;
     margin: 0 !important;
-    height: 56px !important
+    height: 56px !important;
+    background: var(--background-base-low) !important;
 }
 .channelBottomBarArea_f75fb0 {
-    border-top: 1px solid var(--border-subtle) !important;
+    border-top: 1px solid color-mix(in oklab,hsl(var(--opacity-80-hsl)/0.12156862745098039) 100%,hsl(var(--theme-base-color-hsl,0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount,0%)) !important;
 }
 .channelTextArea_f75fb0 {
     border: none !important;
@@ -45,7 +47,7 @@
     border-radius: 0 !important
 }
 
-.buttons__74017 {
+.buttons__74017, .buttons__37e49, .toolbar__9293f {
     gap: 0 !important;
 }
 
@@ -54,15 +56,25 @@ button[aria-label="Send a gift"] {
 }
 
 .typing_b88801 {
-    top: 0 !important;
-    left: 5em !important;
+    top: -24px !important;
+    left: 0em !important;
+    width: 90% !important;
+    padding-left: 2em;
+    margin-bottom: 1px;
+    background-color: var(--bg-overlay-chat,var(--background-base-lower));
+    /* box-shadow: 0 -5px 5px var(--bg-overlay-chat,var(--background-base-lower)); */
+    border-bottom: 1px solid var(--border-subtle) !important;
+}
+.scrollerInner__36d07 {
+    padding-bottom: 16px;
 }
 
-/* Hoist sidebar a bit */
+/* Hoist the sidebar upwards */
 
 .sidebar_c48ade {
     top: calc(0px - var(--custom-app-top-bar-height)) !important;
     margin-bottom: calc(0px - var(--custom-app-top-bar-height)) !important;
+
 }
 
 .privateChannels__35e86 > .searchBar__35e86,
@@ -71,12 +83,16 @@ header.header_f37cb1,
     height: calc(var(--custom-app-top-bar-height) + 1px) !important;
 }
 .title__85643 {
-    /* todo: let click underneath! */
     z-index: 10
 }
 
+.privateChannels__35e86 button {
+    /* hide 'Find or start a conversation' button; it looks odd */
+    display: none !important;
+}
+
 .container_f37cb1 {
-    /* width: 0; */
+    /* container for server info - arrows, boosting */
     border-bottom: 1px solid var(--border-subtle);
 }
 header.header_f37cb1 {
@@ -87,12 +103,27 @@ header.header_f37cb1 {
     display: none !important;
 }
 
+/* sidebar */
 .sidebarListRounded_c48ade {
     border-top: none !important;
     border-radius: 0 !important
 }
 .guilds_c48ade {
-    margin-top: var(--custom-app-top-bar-height) !important
+    margin-top: var(--custom-app-top-bar-height) !important;
+}
+.guilds_c48ade, .scroller__99e7c {
+    margin-bottom: calc(var(--custom-app-panels-height) - 2px) !important;
+}
+.scroller__629e4 {
+    margin-bottom: 0 !important;
+}
+.container__2637a {
+    padding-bottom: calc(var(--custom-app-panels-height) - 1px) !important;
+}
+
+.bottom__7aaec {
+    /* NEW UNREADS */
+    bottom: var(--custom-app-panels-height) !important;
 }
 
 /* Make search bar collapse when not in use */
@@ -102,4 +133,20 @@ header.header_f37cb1 {
 
 .focused__97492 .searchBar__97492 {
     width: 244px !important;
+}
+
+.avatarWrapper__37e49 {
+    /* avatar wrapper should be rounded on both sides! */
+    border-radius: 24px !important;
+}
+
+/* Put the message box over the Member List */
+.form_f75fb0 {
+    width: calc(100vw - var(--custom-guild-sidebar-width)) !important;
+    z-index: 10;
+}
+
+.container_c8ffbb {
+    /* todo: padding-bottom that works nicely with a large message bar */
+    /* is that necessary? */
 }
