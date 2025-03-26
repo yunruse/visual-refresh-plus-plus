@@ -1,6 +1,14 @@
-/* Mia's Discord 'Visual Refresh' Tweaks */
-/* Experimental! */
+/**
+ * @name Visual Refresh Tweaks
+ * @author yunruse
+ * @authorId 391292177826709504
+ * @version 0
+ * @description Tweak some of the 'Visual Refresh' changes to fit in a bit nicer.
+ * @website https://gist.github.com/yunruse/1c3850d49f3bc2d69d2d91738da7b29b
+ * **/
 
+
+ 
 /* Bottom-left: User Status */
 .panels_c48ade {
     width: 100% !important;
