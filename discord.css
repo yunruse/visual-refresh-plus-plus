@@ -1,14 +1,21 @@
+/*
+ * This is a Discord theme. It's possible to install it yourself–
+ * (copy and paste it into a <style> in the HTML)
+ * but it's far easier to save this and use it as a theme in:
+ * Vencord:       https://vencord.dev, or
+ * BetterDiscord: https://betterdiscord.app
+ * I prefer Vencord personally, but this should work on either :)
+ */
+
 /**
- * @name Visual Refresh Tweaks
- * @author yunruse
+ * @name 'Visual Refresh' Tweaks
+ * @author Mia yun Ruse
  * @authorId 391292177826709504
  * @version 0
- * @description Tweak some of the 'Visual Refresh' changes to fit in a bit nicer.
  * @website https://gist.github.com/yunruse/1c3850d49f3bc2d69d2d91738da7b29b
- * **/
+ * @description Tweak some of the 'Visual Refresh' changes to fit in a bit nicer.
+ **/
 
-
- 
 /* Bottom-left: User Status */
 .panels_c48ade {
     width: 100% !important;
