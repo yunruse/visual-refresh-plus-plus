@@ -11,7 +11,7 @@
  * @name 'Visual Refresh' Tweaks
  * @author Mia yun Ruse
  * @authorId 391292177826709504
- * @version 0.2.0
+ * @version 0
  * @website https://gist.github.com/yunruse/1c3850d49f3bc2d69d2d91738da7b29b
  * @description Tweak some of the 'Visual Refresh' changes to fit in a bit nicer; most notably 'docking' the floating elements at the bottom.
  **/
@@ -34,16 +34,19 @@
     border: none;
     border-radius: 0 !important;
     margin: 0 !important;
-    height: 56px !important;
     background: var(--background-base-low) !important;
+    padding-right: 0.5em;
+    padding-right: 0;
 }
 .channelBottomBarArea_f75fb0 {
+
     border-top: 1px solid color-mix(in oklab,hsl(var(--opacity-80-hsl)/0.12156862745098039) 100%,hsl(var(--theme-base-color-hsl,0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount,0%)) !important;
 }
 .channelTextArea_f75fb0 {
     border: none !important;
 }
 .scrollableContainer__74017 {
+    min-height: 56px !important;
     border-radius: 0 !important
 }
 
@@ -64,6 +67,9 @@ button[aria-label="Send a gift"] {
     background-color: var(--bg-overlay-chat,var(--background-base-lower));
     /* box-shadow: 0 -5px 5px var(--bg-overlay-chat,var(--background-base-lower)); */
     border-bottom: 1px solid var(--border-subtle) !important;
+}
+.typing_b88801 span {
+    padding-left: 1.5em;
 }
 .scrollerInner__36d07 {
     padding-bottom: 16px;
@@ -149,4 +155,44 @@ header.header_f37cb1 {
 .container_c8ffbb {
     /* todo: padding-bottom that works nicely with a large message bar */
     /* is that necessary? */
+}
+
+.scroller__629e4 {
+    /* slightly more space in channel list */
+    padding-right: 0;
+}
+
+/* circles again! */
+.icon__6e9f8 {
+    border-radius: 50%;
+    transition: border-radius 0.5s;
+}
+.selected_e5445c .icon__6e9f8, .listItem__650eb:hover .icon__6e9f8 {
+    border-radius: 12px;
+}
+
+/* .wrapper_cc5dd2, .icon__6e9f8, .wrapper__6e9f8, .wrapper_cc5dd2 foreignObject, .wrapper_cc5dd2 mask, .wrapper_cc5dd2 svg, .wrapper_cc5dd2 use {
+    width: 50px !important;
+    height: 50px !important;
+} */
+
+/* Compress the server icon list: */
+
+.guilds_c48ade {
+    width: calc(var(--space-xs) * 2 + 40px) !important;
+}
+.isExpanded__48112, .listItem__650eb {
+    transform: translateX(calc(0px - var(--space-xs))) !important
+}
+.isExpanded__48112 .listItem__650eb {
+    transform: translateX(0px) !important
+}
+.pill_e5445c {
+    transform: translateX(var(--space-xs)) !important;
+}
+
+/* larger popouts! */
+
+#popout_83 {
+    height: 100vh;
 }
