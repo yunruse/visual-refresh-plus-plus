@@ -1,4 +1,4 @@
-/*
+/* /*
  * This is a Discord theme. It's possible to install it yourself–
  * (copy and paste it into a <style> in the HTML)
  * but it's far easier to save this and use it as a theme in:
@@ -16,183 +16,350 @@
  * @description Tweak some of the 'Visual Refresh' changes to fit in a bit nicer; most notably 'docking' the floating elements at the bottom.
  **/
 
-/* Bottom-left: User Status */
+/*
+ *   USER PANEL: DOCK 
+ */
 .panels_c48ade {
-    width: 100% !important;
-    left: 0 !important;
-    bottom: -1px !important;
-    border-radius: 0 !important;
-    background: var(--background-base-low);
+  width: 100% !important;
+  left: 0 !important;
+  bottom: -1px !important;
+  border-radius: 0 !important;
+  background: var(--background-base-low);
+}
+
+.bottom__7aaec {
+  /* NEW UNREADS */
+  bottom: var(--custom-app-panels-height) !important;
+}
+
+.guilds_c48ade {
+  margin-top: var(--custom-app-top-bar-height) !important;
+}
+
+.guilds_c48ade,
+.scroller__99e7c {
+  margin-bottom: calc(var(--custom-app-panels-height) - 2px) !important;
+}
+
+.scroller__629e4 {
+  margin-bottom: 0 !important;
+}
+
+.container__2637a {
+  padding-bottom: calc(var(--custom-app-panels-height) - 1px) !important;
 }
 
 
-/* Message box */
+/*
+ *   'DOCK' THE MESSAGE BOX
+ */
 .form_f75fb0 {
-    padding: 0 !important;
-}
-.channelTextArea_f75fb0 {
-    border: none;
-    border-radius: 0 !important;
-    margin: 0 !important;
-    background: var(--background-base-low) !important;
-    padding-right: 0.5em;
-    padding-right: 0;
-}
-.channelBottomBarArea_f75fb0 {
+  padding: 0 !important;
 
-    border-top: 1px solid color-mix(in oklab,hsl(var(--opacity-80-hsl)/0.12156862745098039) 100%,hsl(var(--theme-base-color-hsl,0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount,0%)) !important;
-}
-.channelTextArea_f75fb0 {
-    border: none !important;
-}
-.scrollableContainer__74017 {
-    min-height: 56px !important;
-    border-radius: 0 !important
-}
 
-.buttons__74017, .buttons__37e49, .toolbar__9293f {
-    gap: 0 !important;
-}
+  & .channelBottomBarArea_f75fb0 {
+    /* todo: why is this so... specific */
+    border-top: 1px solid color-mix(in oklab, hsl(var(--opacity-80-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%)) !important;
 
-button[aria-label="Send a gift"] {
+    & .channelTextArea_f75fb0 {
+      border: none;
+      border-radius: 0 !important;
+      margin: 0 !important;
+      background: var(--background-base-low) !important;
+      padding-right: 0.5em;
+      padding-right: 0;
+      border: none !important;
+
+      & .scrollableContainer__74017 {
+        min-height: 56px !important;
+        border-radius: 0 !important
+      }
+    }
+  }
+
+  button[aria-label="Send a gift"] {
+    /* who even does this? */
     display: none !important;
-}
+  }
 
-.typing_b88801 {
+  & .typing_b88801 {
+    /* move typing to be above bar, as in mobile */
     top: -24px !important;
     left: 0em !important;
     width: 90% !important;
     padding-left: 2em;
     margin-bottom: 1px;
-    background-color: var(--bg-overlay-chat,var(--background-base-lower));
+    background-color: var(--bg-overlay-chat, var(--background-base-lower));
     /* box-shadow: 0 -5px 5px var(--bg-overlay-chat,var(--background-base-lower)); */
     border-bottom: 1px solid var(--border-subtle) !important;
+
+    & span {
+      padding-left: 1.5em;
+    }
+  }
 }
-.typing_b88801 span {
-    padding-left: 1.5em;
+
+
+
+/*
+ *   MESSAGE BOX GOES OVER MEMBER LIST
+ *   yay, wider text input!
+ */
+
+.form_f75fb0 {
+  width: calc(100vw - var(--custom-guild-sidebar-width)) !important;
+  z-index: 10;
 }
+
+.container__01ae2 .form_f75fb0,
+.threadSidebarOpen_f75fb0 .form_f75fb0 {
+  /* ..except in forum popouts! */
+  width: 100% !important;
+}
+
+
+
+
 .scrollerInner__36d07 {
-    padding-bottom: 16px;
+  /* what does this do..? */
+  padding-bottom: 16px;
 }
 
-/* Hoist the sidebar upwards */
 
+
+/*
+ *   MESSAGE BOX, USER BOX: reduce icon spacing
+ */
+.buttons__74017,
+.buttons__37e49,
+.toolbar__9293f {
+  gap: 0 !important;
+}
+
+
+
+/*
+ *  HOIST THE SIDEBAR UPWARDS
+ *  The server name now only appears once;
+ *  its boost and v icon show at the very top, too.
+ */
+
+/* todo: remove left bit of border; it's annoying */
 .sidebar_c48ade {
-    top: calc(0px - var(--custom-app-top-bar-height)) !important;
-    margin-bottom: calc(0px - var(--custom-app-top-bar-height)) !important;
-
+  top: calc(0px - var(--custom-app-top-bar-height)) !important;
+  margin-bottom: calc(0px - var(--custom-app-top-bar-height)) !important;
 }
 
-.privateChannels__35e86 > .searchBar__35e86,
+.sidebarListRounded_c48ade {
+  /* remove top-left rounded corner */
+  border-top: none !important;
+  border-radius: 0 !important
+}
+
+.privateChannels__35e86>.searchBar__35e86,
 header.header_f37cb1,
 .bannerVisible_f37cb1 .headerGlass_f37cb1 {
-    height: calc(var(--custom-app-top-bar-height) + 1px) !important;
+  height: var(--custom-app-top-bar-height) !important;
 }
+
+.headerGlass_f37cb1 {
+  opacity: 0 !important;
+}
+
 .title__85643 {
-    z-index: 10
+  z-index: 10
 }
 
 .privateChannels__35e86 button {
-    /* hide 'Find or start a conversation' button; it looks odd */
-    display: none !important;
+  /* hide 'Find or start a conversation' button; it looks odd */
+  display: none !important;
 }
 
 .container_f37cb1 {
-    /* container for server info - arrows, boosting */
-    border-bottom: 1px solid var(--border-subtle);
+  /* container for server info - arrows, boosting */
+  /* todo: match the other line! it's inconsistent!!! */
+  border-bottom: 1px solid var(--app-border-frame);
+  background: var(--bg-overlay-app-frame, var(--bg-base-tertiary))
 }
+
 header.header_f37cb1 {
-    width: 0 !important;
-    border-bottom: none !important;
+  width: 0 !important;
+  border-bottom: none !important;
 }
+
 .name_f37cb1 {
-    display: none !important;
-}
-
-/* sidebar */
-.sidebarListRounded_c48ade {
-    border-top: none !important;
-    border-radius: 0 !important
-}
-.guilds_c48ade {
-    margin-top: var(--custom-app-top-bar-height) !important;
-}
-.guilds_c48ade, .scroller__99e7c {
-    margin-bottom: calc(var(--custom-app-panels-height) - 2px) !important;
-}
-.scroller__629e4 {
-    margin-bottom: 0 !important;
-}
-.container__2637a {
-    padding-bottom: calc(var(--custom-app-panels-height) - 1px) !important;
-}
-
-.bottom__7aaec {
-    /* NEW UNREADS */
-    bottom: var(--custom-app-panels-height) !important;
+  display: none !important;
 }
 
 /* Make search bar collapse when not in use */
 .searchBar__97492 {
-    width: 6em !important
+  width: 6em !important
 }
 
-.focused__97492 .searchBar__97492 {
-    width: 244px !important;
+.open__97492 .searchBar__97492 {
+  width: 244px !important;
 }
 
+
+
+/*
+ *   CHANNEL TOOLBAR: REPOSITION ICONS
+ *   such that only Threads and Pinned are on the left
+ *   for easier signposting
+ */
+.toolbar__9293f {
+  & div[aria-label="More"]            {order: -1}
+  & div[aria-label="Pinned Messages"] {order: 0}
+  & div[aria-label="Threads"]         {order: 1}
+  & .search__49676                    {order: 5}
+
+  & div[aria-label="Add Friends to DM"],
+  div[aria-label="Notification Settings"] {order: 10}
+
+  & div[aria-label="Show User Profile (Unavailable)"],
+  div[aria-label="Show User Profile"],
+  div[aria-label="Hide User Profile"],
+  div[aria-label="Show Member List"],
+  div[aria-label="Hide Member List"] {order: 11}
+}
+
+
+
+/*
+ *   AVATARS AND SERVER ICONS ARE CIRCLES
+ */
 .avatarWrapper__37e49 {
-    /* avatar wrapper should be rounded on both sides! */
-    border-radius: 24px !important;
+  /* avatar wrapper should be rounded on both sides! */
+  border-radius: 24px !important;
 }
 
-/* Put the message box over the Member List */
-.form_f75fb0 {
-    width: calc(100vw - var(--custom-guild-sidebar-width)) !important;
-    z-index: 10;
+.guildIcon__85643 {
+  border-radius: 24px !important;
+  height: 1.6em;
+  width: 1.6em;
 }
 
-.container_c8ffbb {
-    /* todo: padding-bottom that works nicely with a large message bar */
-    /* is that necessary? */
-}
-
-.scroller__629e4 {
-    /* slightly more space in channel list */
-    padding-right: 0;
-}
-
-/* circles again! */
 .icon__6e9f8 {
-    border-radius: 50%;
-    transition: border-radius 0.5s;
-}
-.selected_e5445c .icon__6e9f8, .listItem__650eb:hover .icon__6e9f8 {
-    border-radius: 12px;
+  border-radius: 50%;
+  transition: border-radius 0.5s;
 }
 
-/* .wrapper_cc5dd2, .icon__6e9f8, .wrapper__6e9f8, .wrapper_cc5dd2 foreignObject, .wrapper_cc5dd2 mask, .wrapper_cc5dd2 svg, .wrapper_cc5dd2 use {
-    width: 50px !important;
-    height: 50px !important;
-} */
-
-/* Compress the server icon list: */
-
-.guilds_c48ade {
-    width: calc(var(--space-xs) * 2 + 40px) !important;
-}
-.isExpanded__48112, .listItem__650eb {
-    transform: translateX(calc(0px - var(--space-xs))) !important
-}
-.isExpanded__48112 .listItem__650eb {
-    transform: translateX(0px) !important
-}
-.pill_e5445c {
-    transform: translateX(var(--space-xs)) !important;
+.selected_e5445c .icon__6e9f8,
+.listItem__650eb:hover .icon__6e9f8 {
+  border-radius: 12px;
 }
 
-/* larger popouts! */
 
-#popout_83 {
+
+/* gyar, here be dragons */
+
+
+
+/*
+ *   LARGER POPOUTS (INBOX, PINNED)
+ */
+.TESTING .appAsidePanelWrapper_a3002d {
+  & .clickTrapContainer_da8173>div {
     height: 100vh;
+  }
+
+  & .container__2692d,
+  .container_fc561d,
+  .messagesPopoutWrap__45690 {
+    max-height: 75vh !important;
+    height: 75vh !important;
+  }
+
+  .messagesPopoutWrap__45690 {
+    /* todo: stop being glitchy when the window is small */
+  }
+
+  /* todo: user profile popouts don't work */
+}
+
+
+
+/*
+ *   HIDE MUTE/DEAFEN ICONS WHEN NOT IN USE
+ */
+
+.TESTING .panels_c48ade {
+  /* Mute icons hide when not in use */
+  & button[aria-label="Deafen"],
+  & button[aria-label="Mute"] {
+    /* display: none; */
+  }
+
+  /* hide deafen and mute when not in use...??? */
+  &:has(.connection_e131a9) button[aria-label="Deafen"],
+  &:has(.connection_e131a9) button[aria-label="Mute"],
+  &:hover button[aria-label="Deafen"],
+  &:hover button[aria-label="Mute"] {
+    display: flex;
+  }
+
+}
+
+
+
+/*
+ *   SERVER LIST: MAKE A BIT LESS WIDE
+ */
+.guilds_c48ade {
+  width: calc(var(--space-xs) * 2 + 40px) !important;
+
+  & .isExpanded__48112,
+  .listItem__650eb {
+    transform: translateX(calc(0px - var(--space-xs))) !important
+  }
+
+  & .isExpanded__48112 .listItem__650eb {
+    transform: translateX(0px) !important
+  }
+
+  & .pill_e5445c {
+    transform: translateX(var(--space-xs)) !important;
+  }
+}
+
+
+
+/*
+ *   SUBTLE SERVER PILLS
+ *   Might be nice; might be stupid. Do as seems smart!
+ */
+.TESTING .pill_e5445c {
+  /* width: 100%;
+  transform: translateX(50%) !important;
+  opacity: 0.3; */
+  transition: width 0.3s;
+
+  & span {
+    width: 100%;
+    transition: background-color 0.3s;
+    background: var(--bg-overlay-selected, var(--background-modifier-selected));
+    /* if color-mix is desired and available, this makes the pill a bit more prominent. change up the % as you want! */
+    background: color-mix(in oklch, white 5%, var(--bg-overlay-selected, var(--background-modifier-selected)));
+  }
+}
+
+.TESTING .listItem__650eb:has(.selected__6e9f8) .pill_e5445c {
+  width: 50%;
+}
+
+
+/*
+ *   TOP-RIGHT: ORDER OF ICONS
+ *   Updates are on the left, so they don't disturb the usual order
+ *   and pop out, but are more subtle so you can ignore them for a sec
+ *   while you remember where you put your Vencord installer
+ */
+.bar_c38106 .trailing_c38106 {
+  & div[aria-label="Update Ready!"] {order: 1} /* update */
+  & .recentsIcon_c99c29             {order: 2} /* inbox */
+  & .anchor_edefb8                  {order: 3} /* help */
+  & div[aria-label="Update Ready!"] {
+    opacity: 0.4;
+  }
+
 }
