@@ -358,6 +358,7 @@ header.header_f37cb1 {
   & div[aria-label="Update Ready!"] {order: 1} /* update */
   & .recentsIcon_c99c29             {order: 2} /* inbox */
   & .anchor_edefb8                  {order: 3} /* help */
+  & .winButtons_c38106              {order: 100} /* window */
   & div[aria-label="Update Ready!"] {
     opacity: 0.4;
   }
