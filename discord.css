@@ -98,6 +98,17 @@
     }
   }
 }
+.content_f75fb0:has(.container_c8ffbb) .cooldownWrapper_b21699 {
+  position: relative;
+  right: calc(var(--custom-member-list-width) - 35px);
+  /* & .tabularNumbers__4bd52 {
+    /* font-size: 0px !important; */
+}
+.form_f75fb0:has(.typingDots_b88801 svg) .tabularNumbers__4bd52 {
+  font-size: 0px !important;
+
+}
+
 
 
 
