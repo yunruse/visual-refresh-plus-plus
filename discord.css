@@ -19,7 +19,7 @@
 /*
  *   USER PANEL: DOCK 
  */
-.panels_c48ade {
+ .panels_c48ade {
   width: 100% !important;
   left: 0 !important;
   bottom: -1px !important;
@@ -171,6 +171,7 @@
 header.header_f37cb1,
 .bannerVisible_f37cb1 .headerGlass_f37cb1 {
   height: var(--custom-app-top-bar-height) !important;
+  background: var(--bg-overlay-5,var(--background-tertiary)) !important;
 }
 
 .headerGlass_f37cb1 {
@@ -373,5 +374,4 @@ header.header_f37cb1 {
   & div[aria-label="Update Ready!"] {
     opacity: 0.4;
   }
-
 }
