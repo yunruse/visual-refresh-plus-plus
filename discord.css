@@ -162,15 +162,20 @@
 header.header_f37cb1,
 .bannerVisible_f37cb1 .headerGlass_f37cb1 {
   height: var(--custom-app-top-bar-height) !important;
-  background: var(--bg-overlay-5,var(--background-tertiary)) !important;
   border-bottom: 0;
+}
+/* Match colour of title bar  */
+.privateChannels__35e86>.searchBar__35e86,
+.bannerVisible_f37cb1 .headerGlass_f37cb1 {
+  background: var(--bg-overlay-5, var(--background-tertiary)) !important;
 }
 
 .headerGlass_f37cb1 {
   opacity: 0 !important;
 }
-.scroller__99e7c {
+.scroller__99e7c, .scroller__629e4 {
   border-top: 1px solid color-mix(in oklab, var(--app-border-frame) 80%, transparent) !important;
+  margin-right: 0 !important;
 }
 
 .title__85643 {
