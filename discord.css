@@ -77,11 +77,11 @@
     /* move typing to be above bar, as in mobile */
     top: -24px !important;
     left: 0em !important;
-    width: 90% !important;
+    width: calc(100% - 4em) !important;
+    padding-right: 2em;
     padding-left: 2em;
     margin-bottom: 1px;
-    background-color: var(--bg-overlay-chat, var(--background-base-lower));
-    /* box-shadow: 0 -5px 5px var(--bg-overlay-chat,var(--background-base-lower)); */
+    background: var(--bg-overlay-3, var(--background-tertiary));
     border-bottom: 1px solid var(--border-subtle) !important;
 
     & span {
