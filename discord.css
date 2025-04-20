@@ -163,10 +163,14 @@ header.header_f37cb1,
 .bannerVisible_f37cb1 .headerGlass_f37cb1 {
   height: var(--custom-app-top-bar-height) !important;
   background: var(--bg-overlay-5,var(--background-tertiary)) !important;
+  border-bottom: 0;
 }
 
 .headerGlass_f37cb1 {
   opacity: 0 !important;
+}
+.scroller__99e7c {
+  border-top: 1px solid color-mix(in oklab, var(--app-border-frame) 80%, transparent) !important;
 }
 
 .title__85643 {
@@ -180,9 +184,7 @@ header.header_f37cb1,
 
 .container_f37cb1 {
   /* container for server info - arrows, boosting */
-  /* todo: match the other line! it's inconsistent!!! */
-  border-bottom: 1px solid var(--app-border-frame);
-  background: var(--bg-overlay-app-frame, var(--bg-base-tertiary))
+  background: var(--bg-overlay-app-frame, var(--bg-base-tertiary));
 }
 
 header.header_f37cb1 {
