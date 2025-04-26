@@ -97,7 +97,19 @@
 }
 .form_f75fb0:has(.typingDots_b88801 svg) .tabularNumbers__4bd52 {
   font-size: 0px !important;
-
+}
+.entryPointButtonContainer_f75fb0 {
+  /* Restyle bot 'Commands' button to fit a bit nicer */
+  margin-bottom: unset;
+  padding: var(--space-xs);
+  padding-right: 0;
+  /* padding: ; */
+  & button {
+    margin: 0;
+    height: 100%;
+    min-height: calc(100% - 2 * var(--space-xs)) !important;
+    /* border-radius: 0; */
+  }
 }
 
 
