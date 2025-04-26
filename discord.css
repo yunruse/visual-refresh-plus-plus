@@ -205,8 +205,10 @@ header.header_f37cb1,
 }
 
 header.header_f37cb1 {
-  width: 0 !important;
   border-bottom: none !important;
+}
+.headerContent_f37cb1 {
+  justify-content: left !important;
 }
 
 .name_f37cb1 {
