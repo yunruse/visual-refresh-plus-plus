@@ -15,7 +15,7 @@
   left: 0 !important;
   bottom: -1px !important;
   border-radius: 0 !important;
-  background: var(--background-base-low);
+  background: var(--background-gradient-higher, var(--background-base-low));
 }
 
 .bottom__7aaec {
@@ -70,15 +70,17 @@
 
   button[aria-label="Send a gift"] {
     /* who even does this? */
-    display: none !important;
+    /* display: none !important; */
   }
 
   & .typing_b88801 {
     /* move typing to be above bar, as in mobile */
     top: -24px !important;
     left: 0em !important;
-    width: calc(100% - 4em) !important;
-    padding-right: 2em;
+    --typ-sidebar-width: 20px;
+    width: calc(100% - 2em - var(--typ-sidebar-width));
+    /* width: calc(100% - 4em) !important; */
+    /* padding-right: 2em; */
     padding-left: 2em;
     margin-bottom: 1px;
     background: var(--bg-overlay-3, var(--background-tertiary));
@@ -89,11 +91,9 @@
     }
   }
 }
-.content_f75fb0:has(.container_c8ffbb) .cooldownWrapper_b21699 {
-  position: relative;
-  right: calc(var(--custom-member-list-width) - 35px);
-  /* & .tabularNumbers__4bd52 {
-    /* font-size: 0px !important; */
+.content_f75fb0:has(.container_c8ffbb) .typing_b88801 {
+  --typ-sidebar-width: calc(var(--custom-member-list-width) + 20px);
+  /* width: calc(100% - var(--custom-member-list-width) - 2em - 15px); */
 }
 .form_f75fb0:has(.typingDots_b88801 svg) .tabularNumbers__4bd52 {
   font-size: 0px !important;
@@ -121,7 +121,7 @@
  */
 
 .form_f75fb0 {
-  width: calc(100vw - var(--custom-guild-sidebar-width)) !important;
+  width: calc(100vw - var(--custom-guild-sidebar-width) + 15px) !important;
   z-index: 10;
 }
 
