@@ -311,21 +311,15 @@ header.header_f37cb1 {
  *   HIDE MUTE/DEAFEN ICONS WHEN NOT IN USE
  */
 
-.TESTING .panels_c48ade {
+section[aria-label="User area"]:not(:hover):not(:has(.connection_e131a9)) {
   /* Mute icons hide when not in use */
   & button[aria-label="Deafen"],
-  & button[aria-label="Mute"] {
-    /* display: none; */
+  & button[aria-label="Input Options"],
+  & button[aria-label="Mute"],
+  & button[aria-label="Output Options"]
+  {
+    display: none;
   }
-
-  /* hide deafen and mute when not in use...??? */
-  &:has(.connection_e131a9) button[aria-label="Deafen"],
-  &:has(.connection_e131a9) button[aria-label="Mute"],
-  &:hover button[aria-label="Deafen"],
-  &:hover button[aria-label="Mute"] {
-    display: flex;
-  }
-
 }
 
 
