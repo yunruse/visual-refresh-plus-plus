@@ -345,31 +345,6 @@ nav[aria-label="Servers sidebar"] {
 }
 
 
-
-/*
- *   SUBTLE SERVER PILLS
- *   Might be nice; might be stupid. Do as seems smart!
- */
-.TESTING .pill_e5445c {
-  /* width: 100%;
-  transform: translateX(50%) !important;
-  opacity: 0.3; */
-  transition: width 0.3s;
-
-  & span {
-    width: 100%;
-    transition: background-color 0.3s;
-    background: var(--bg-overlay-selected, var(--background-modifier-selected));
-    /* if color-mix is desired and available, this makes the pill a bit more prominent. change up the % as you want! */
-    background: color-mix(in oklch, white 5%, var(--bg-overlay-selected, var(--background-modifier-selected)));
-  }
-}
-
-.TESTING .listItem__650eb:has(.selected__6e9f8) .pill_e5445c {
-  width: 50%;
-}
-
-
 /*
  *   TOP-RIGHT: ORDER OF ICONS
  *   Updates are on the left, so they don't disturb the usual order
