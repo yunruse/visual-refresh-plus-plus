@@ -131,6 +131,10 @@ section[aria-label="User area"] {
   width: 100% !important;
 }
 
+/* ensure that search isn't broken and you can click NEXT and PREVIOUS page */
+section[aria-label="Search Results"] {
+  max-height: calc(100% - 50px);
+}
 
 
 
