@@ -10,7 +10,7 @@
 /*
  *   USER PANEL: DOCK 
  */
- .panels_c48ade {
+section[aria-label="User area"] {
   width: 100% !important;
   left: 0 !important;
   bottom: -1px !important;
@@ -329,7 +329,7 @@ header.header_f37cb1 {
 /*
  *   SERVER LIST: MAKE A BIT LESS WIDE
  */
-.guilds_c48ade {
+nav[aria-label="Servers sidebar"] {
   width: calc(var(--space-xs) * 2 + 40px) !important;
 
   & .isExpanded__48112,
