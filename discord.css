@@ -44,15 +44,21 @@ section[aria-label="User area"] {
 /*
  *   'DOCK' THE MESSAGE BOX
  */
-.form_f75fb0 {
+
+
+/* .f75fb00fb7356cbe-form */
+main form {
   padding: 0 !important;
 
+  /* .f75fb00fb7356cbe-channelBottomBarArea */
+  & > div > div {
 
-  & .channelBottomBarArea_f75fb0 {
     /* todo: why is this so... specific */
     border-top: 1px solid color-mix(in oklab, hsl(var(--opacity-80-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%)) !important;
 
-    & .channelTextArea_f75fb0 {
+    /* .f75fb00fb7356cbe-channelTextArea */
+    & > div {
+      /* display: none; */
       border: none;
       border-radius: 0 !important;
       margin: 0 !important;
@@ -61,8 +67,8 @@ section[aria-label="User area"] {
       padding-right: 0;
       border: none !important;
 
-      & .scrollableContainer__74017 {
-        min-height: 56px !important;
+      /* _740174f3d6a2c8fe-scrollableContainer */
+      & > div {
         border-radius: 0 !important
       }
     }
@@ -148,9 +154,9 @@ section[aria-label="Search Results"] {
 /*
  *   MESSAGE BOX, USER BOX: reduce icon spacing
  */
-.buttons__74017,
-.buttons__37e49,
-.toolbar__9293f {
+._9293f6b2fc12398a-toolbar,
+._37e49614b9f110a9-buttons,
+._740174f3d6a2c8fe-buttons {
   gap: 0 !important;
 }
 
@@ -331,11 +337,11 @@ nav[aria-label="Servers sidebar"] {
   width: calc(var(--space-xs) * 2 + 40px) !important;
 
   & .isExpanded__48112,
-  .listItem__650eb {
+  ._650eb104245d257b-listItem {
     transform: translateX(calc(0px - var(--space-xs))) !important
   }
 
-  & .isExpanded__48112 .listItem__650eb {
+  & .isExpanded__48112 ._650eb104245d257b-listItem {
     transform: translateX(0px) !important
   }
 
