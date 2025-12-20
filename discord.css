@@ -51,14 +51,14 @@ main form {
   padding: 0 !important;
 
   /* .f75fb00fb7356cbe-channelBottomBarArea */
-  & > div {
+  & > div > div {
 
     /* todo: why is this so... specific */
     border-top: 1px solid color-mix(in oklab, hsl(var(--opacity-80-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%)) !important;
 
     /* .f75fb00fb7356cbe-channelTextArea */
     & > div {
-      border: none;
+      border: none !important;
       border-radius: 0 !important;
       margin: 0 !important;
       background: var(--background-base-low) !important;
@@ -68,7 +68,7 @@ main form {
 
       /* _740174f3d6a2c8fe-scrollableContainer */
       & > div {
-        border-radius: 0 !important
+        border-radius: 0 !important;
       }
     }
   }
