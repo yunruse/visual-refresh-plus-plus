@@ -50,8 +50,7 @@ section[aria-label="User area"] {
 main form {
   padding: 0 !important;
 
-  /* .f75fb00fb7356cbe-channelBottomBarArea */
-  & > div > div {
+  & div[class^=channelBottomBarArea] {
 
     /* todo: why is this so... specific */
     border-top: 1px solid color-mix(in oklab, hsl(var(--opacity-80-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%)) !important;
@@ -179,14 +178,14 @@ section[aria-label="Search Results"] {
   border-radius: 0 !important
 }
 
-.privateChannels__35e86>.searchBar__35e86,
+.privateChannels__35e86 > .searchBar__35e86,
 header.header_f37cb1,
 .bannerVisible_f37cb1 .headerGlass_f37cb1 {
   height: var(--custom-app-top-bar-height) !important;
   border-bottom: 0;
 }
 /* Match colour of title bar  */
-.privateChannels__35e86>.searchBar__35e86,
+.privateChannels__35e86 > .searchBar__35e86,
 .bannerVisible_f37cb1 .headerGlass_f37cb1 {
   background: var(--bg-overlay-5, var(--background-tertiary)) !important;
 }
@@ -333,19 +332,12 @@ section[aria-label="User area"]:not(:hover):not(:has(.connection_e131a9)) {
  *   SERVER LIST: MAKE A BIT LESS WIDE
  */
 nav[aria-label="Servers sidebar"] {
-  width: calc(var(--space-xs) * 2 + 40px) !important;
+  --sidebar-spacing: 6px;
 
-  & .isExpanded__48112,
-  ._650eb104245d257b-listItem {
-    transform: translateX(calc(0px - var(--space-xs))) !important
-  }
+  --custom-guild-list-width: calc(var(--space-xs) * 2 + 32px + var(--sidebar-spacing));
 
-  & .isExpanded__48112 ._650eb104245d257b-listItem {
-    transform: translateX(0px) !important
-  }
-
-  & .pill_e5445c {
-    transform: translateX(var(--space-xs)) !important;
+  & span[class^=folderGroupBackground] {
+    transform: translateX(calc(-9px)) !important;
   }
 }
 
