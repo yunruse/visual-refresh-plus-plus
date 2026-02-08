@@ -10,7 +10,7 @@
 /*
  *   USER PANEL: DOCK 
  */
-section[aria-label="User area"] {
+section[aria-label="User status and settings"] {
   width: 100% !important;
   left: 0 !important;
   bottom: -1px !important;
