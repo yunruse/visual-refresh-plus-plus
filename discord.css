@@ -53,7 +53,7 @@ main form {
   & div[class^=channelBottomBarArea] {
 
     /* todo: why is this so... specific */
-    border-top: 1px solid color-mix(in oklab, hsl(var(--opacity-80-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%)) !important;
+    border-top: 1px solid color-mix(in oklab, hsl(var(--opacity-80-hsl)/0.1) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.1) var(--theme-base-color-amount, 0%)) !important;
 
     /* .f75fb00fb7356cbe-channelTextArea */
     & > div {
