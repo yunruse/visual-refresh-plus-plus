@@ -245,7 +245,7 @@ section[aria-label="Channel header"] div[class^=toolbar] {
   /* TODO: Make search bar collapse when not in use */
   /* & div[class^=search] {
     width: 6em;
-}
+  }
   &:has(div[class^=open]) div[class^="search"] {
     width: 12em !important;
   } */
@@ -331,6 +331,17 @@ section[aria-label="User status and settings"]:not(:hover):not(:has(.connection_
   {
     display: none;
   }
+}
+
+/*
+ *   DIRECT MESSAGES: Hide Nitro, Shop, Quests
+ *   you can always ctrl-K to find them if you wish!
+ */
+
+ul[aria-label="Direct Messages"]{
+  a[href="/store"]       { display: none; } /* Nitro */
+  a[href="/shop"]        { display: none; } /* Shop */
+  a[href="/quest-home"]  { display: none; } /* Quests */
 }
 
 
