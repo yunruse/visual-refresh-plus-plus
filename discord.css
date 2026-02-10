@@ -68,6 +68,24 @@ main form {
       /* _740174f3d6a2c8fe-scrollableContainer */
       & > div {
         border-radius: 0 !important;
+/*
+ *   Move upload button (+) to be on the right
+ */
+        /* attachWrapper */
+        & div[class^=attachWrapper] {
+          order: 2;
+          padding-left: 0px;
+          padding-top: var(--space-12);
+          padding-right: 0px;
+          /* offset button a bit */
+          & > div {
+            transform: translateX(10px);
+            padding-right: 0;
+          }
+        }
+        & div [class^=buttons] {
+          order: 3;
+        }
       }
     }
   }
