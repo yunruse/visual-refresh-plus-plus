@@ -152,9 +152,8 @@ section[aria-label="Search Results"] {
 /*
  *   MESSAGE BOX, USER BOX: reduce icon spacing
  */
-._9293f6b2fc12398a-toolbar,
-._37e49614b9f110a9-buttons,
-._740174f3d6a2c8fe-buttons {
+div[class^=buttons],
+div[class^=toolbar] {
   gap: 0 !important;
 }
 
@@ -224,26 +223,24 @@ header.header_f37cb1 {
 }
 
 /* Make search bar collapse when not in use */
-.searchBar__97492 {
-  width: 6em !important
+
+section[aria-label="Channel header"] div[class^=toolbar] {
+  /* & div[class^=search] {
+    width: 6em;
 }
-
-.open__97492 .searchBar__97492 {
-  width: 244px !important;
-}
-
-
+  &:has(div[class^=open]) div[class^="search"] {
+    width: 12em !important;
+  } */
 
 /*
  *   CHANNEL TOOLBAR: REPOSITION ICONS
  *   such that only Threads and Pinned are on the left
  *   for easier signposting
  */
-.toolbar__9293f {
   & div[aria-label="More"]            {order: -1}
   & div[aria-label="Pinned Messages"] {order: 0}
   & div[aria-label="Threads"]         {order: 1}
-  & .search__49676                    {order: 5}
+  & div[class^=search]                {order: 5}
 
   & div[aria-label="Add Friends to DM"],
   div[aria-label="Notification Settings"] {order: 10}
