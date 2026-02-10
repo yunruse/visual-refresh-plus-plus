@@ -240,9 +240,9 @@ header.header_f37cb1 {
   display: none !important;
 }
 
-/* Make search bar collapse when not in use */
-
 section[aria-label="Channel header"] div[class^=toolbar] {
+  
+  /* TODO: Make search bar collapse when not in use */
   /* & div[class^=search] {
     width: 6em;
 }
@@ -322,7 +322,7 @@ div[aria-label="Inbox"] > div {
  *   HIDE MUTE/DEAFEN ICONS WHEN NOT IN USE
  */
 
-section[aria-label="User area"]:not(:hover):not(:has(.connection_e131a9)) {
+section[aria-label="User status and settings"]:not(:hover):not(:has(.connection_e131a9)) {
   /* Mute icons hide when not in use */
   & button[aria-label="Deafen"],
   & button[aria-label="Input Options"],
